@@ -1,0 +1,149 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-color: #30b3db; */
+}
+
+.container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* z-index:; */
+}
+
+h1 {
+    font-size: 40px;
+    width: 211px;
+    /* 行距 */
+    line-height: 1.1em;
+    /* 字间距 */
+    letter-spacing: -0.03em;
+    position: relative;
+    z-index: 1;
+}
+
+h1 svg {
+    position: absolute;
+    bottom: -38px;
+    left: 0px;
+    z-index: -1;
+    margin-bottom: 25px;
+}
+
+#tick {
+    stroke-dasharray: 210px;
+    stroke-dashoffset: 210px;
+    animation: 3s tick ease-in-out infinite;
+    /* animation-fill-mode: forwards; */
+}
+
+@keyframes tick {
+    0%, 50% {
+        stroke: dashoffset 210px;
+    }
+    50%, 100% {
+        stroke-dashoffset: 0px;
+    }
+}
+
+.img {
+    position: relative;
+    top: 0px;
+    left: 5%;
+    transform: scale(.6, .6);
+    z-index: -1;
+}
+
+#p1 {
+    position: absolute;
+    top: 0;
+    transform: rotate(0);
+    zoom: 1;
+    z-index: 2;
+    /* top: -5vw; */
+}
+
+#p2 {
+    position: absolute;
+    z-index: 1;
+    /* animation: turn5 5s linear infinite; */
+}
+
+.game_result {
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+}
+
+/* @keyframes turn5 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    } */
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px, 40px;
+    background-color: #50858B;
+    border-radius: 40px;
+    position: relative;
+    top: 30%;
+    left: 20%;
+    transition: transform 300ms linear;
+}
+
+.btn:before, .btn:after {
+    content: "";
+    position: absolute;
+    /* display: block; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #50858B;
+    z-index: -1;
+    border-radius: inherit;
+    transition: transform 300ms linear;
+}
+
+.btn:before {
+    opacity: .3;
+}
+
+.btn:after {
+    opacity: .5;
+}
+
+.btn:hover {
+    transform: translate(-10px, -10px);
+}
+
+.btn:hover:before {
+    transform: translate(10px, 10px);
+}
+
+.btn:hover:after {
+    transform: translate(5px, 5px);
+}
