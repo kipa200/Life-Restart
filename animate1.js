@@ -1,18 +1,19 @@
 
-// alert('yidiaoyong')
+// alert('已调用函数')
 const element = document.getElementById('p2');
 let start;
 var timestamp = Date.parse(new Date());
+// 通过随机数引入结束时间
 var endtime = 3000 + 1000 * Math.random();
 function step(timestamp) {
     if (start === undefined)
         start = timestamp;
     const elapsed = timestamp - start;
 
-    //这里使用`Math.min()`确保元素刚好停在200px的位置。
+    //设置转速及转动角度
     element.style.transform = 'rotate(' + 0.1 * elapsed+ 'deg)';
 
-    if (elapsed < endtime) { // 在两秒后停止动画
+    if (elapsed < endtime) { // 在指定时间后停止动画
         window.requestAnimationFrame(step);
     }
 

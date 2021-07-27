@@ -2,11 +2,9 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    /* background-color: #30b3db; */
 }
 
 .container {
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -17,9 +15,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* z-index:; */
 }
-
+/* 标题样式 */
 h1 {
     font-size: 40px;
     width: 211px;
@@ -39,6 +36,8 @@ h1 svg {
     margin-bottom: 25px;
 }
 
+/* 标题动画 */
+
 #tick {
     stroke-dasharray: 210px;
     stroke-dashoffset: 210px;
@@ -55,6 +54,10 @@ h1 svg {
     }
 }
 
+/* 标题动画样式结束 */
+
+/* 图片整体样式 */
+
 .img {
     position: relative;
     top: 0px;
@@ -62,6 +65,8 @@ h1 svg {
     transform: scale(.6, .6);
     z-index: -1;
 }
+
+/* 指针样式 */
 
 #p1 {
     position: absolute;
@@ -72,18 +77,14 @@ h1 svg {
     /* top: -5vw; */
 }
 
+/* 转盘样式 */
+
 #p2 {
     position: absolute;
     z-index: 1;
     /* animation: turn5 5s linear infinite; */
 }
-
-.game_result {
-    position: absolute;
-    top: 100px;
-    z-index: 3;
-}
-
+/* 可选css样式转盘循环动画 */
 /* @keyframes turn5 {
     0% {
         -webkit-transform: rotate(0deg);
@@ -101,6 +102,16 @@ h1 svg {
         -webkit-transform: rotate(360deg);
     } */
 
+/* 图片样式结束 */
+
+/* 游戏结果展示样式 */
+
+.game_result {
+    position: absolute;
+    top: 100px;
+    z-index: 3;
+}
+/* 按钮浮动效果 */
 .btn {
     text-decoration: none;
     color: #fff;
@@ -147,3 +158,4 @@ h1 svg {
 .btn:hover:after {
     transform: translate(5px, 5px);
 }
+/* 按钮浮动效果结束 */
